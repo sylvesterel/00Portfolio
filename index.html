@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forside | Mit Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Import af google fonts -->
+
+</head>
+<body>
+
+    <!----------------------------------------
+                      MENU
+     ----------------------------------------->
+
+    <input type="checkbox" id="menu-toggle">
+    <header>
+        <label for="menu-toggle" class="menu-btn-open"><h2>MENU</h2></label>
+    </header>
+
+    <div class="menu-wrapper">
+        <input type="checkbox">
+        <label for="menu-toggle" class="menu-btn-close"><h2>CLOSE</h2></label>
+        <div class="menu-container">
+            <nav class="menu-item">
+                <h1><a href="index.html">OM MIG</a></h1>
+                <h1><a href="cv.html">CV</a></h1>
+                <h1><a href="uddannelse.html">UDDANNELSE</a></h1>
+                <h1><a href="kompetencer.html">KOMPETENCER</a></h1>
+            </nav>
+        </div>
+    </div>
+
+    <!----------------------------------------
+             MAIN CONTENT HERFRA
+     ----------------------------------------->
+
+    <section class="main-start">
+        <h1>PORTFOLIO</h1>
+        <h2>Sylvester Erbs Ledet - se mit arbejde</h2>
+    </section>
+
+    <section class="main-spacer-img">
+        <div class="spacer-container">
+            <div class="video-wrap">
+                <video class="spacer-img-2x2" muted autoplay loop>
+                    <source src="mov/benjamin_ra.MOV" type="video/mp4">
+                </video>
+                <button class="sound-btn">🔇</button>
+            </div>
+
+            <div class="video-wrap">
+                <video class="spacer-img-1x2" muted autoplay loop>
+                    <source src="mov/fraads_rf2.MOV" type="video/mp4">
+                </video>
+                <button class="sound-btn">🔇</button>
+            </div>
+
+            <div class="video-wrap">
+                <video class="spacer-img-2x2" muted autoplay loop>
+                    <source src="mov/mads_rf.MOV" type="video/mp4">
+                </video>
+                <button class="sound-btn">🔇</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-intro">
+        <div class="intro-container">
+            <div class="box-design intro-box-1"></div>
+            <div class="box-design intro-box-2">
+                <h1>Hvem er jeg</h1>
+                <p>Jeg har 4 års erfaring i kultur- og musikbranchen, hvor jeg har arbejdet med konceptudvikling, eventproduktion, afvikling og salgspitch – særligt inden for koncerter og turnéer.
+                    <br> <br> Jeg interesserer mig for krydsfeltet mellem kreativitet og struktur, hvilket jeg har valgt at bygge videre på gennem studiet i IT-arkitektur. Her dykker jeg ned i teknologiske systemer og processer, med ambitionen om at udvikle innovative løsninger, også inden for kultur og events</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!----------------------------------------
+                    FOOTER
+    ----------------------------------------->
+
+    <!-- hoved class -->
+    <footer class="main-footer">
+        <!-- div 1 box -->
+        <div class="footer-box">
+            <h1>Kontakt mig</h1>
+            <h2>Sylvester Erbs Ledet</h2>
+            <div class="footer-kontakt">
+                <p><a href="mailto:sylvester@erbsledet.dk">Sylvester@erbsledet.dk</a></p>
+                <p><a href="tel:+4551686106">+45 5168 6106</a></p>
+            </div>
+            <div class="footer-info-some">
+                <a href="https://www.facebook.com/erbsledet/" target="_blank">
+                    <img class="footer-info-some-img" src="img/social/fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/sylvester.erbs/" target="_blank">
+                    <img class="footer-info-some-img" src="img/social/ig.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/serbsledet/" target="_blank">
+                    <img class="footer-info-some-img" src="img/social/lin.png" alt="Linkedin">
+                </a>
+            </div>
+        </div>
+
+        <!-- div 2 box -->
+        <div class="footer-box footer-box-menu">
+            <h3><a href="index.html">Om mig</a></h3>
+            <h3><a href="cv.html">CV</a></h3>
+            <h3><a href="uddannelse.html">Udannelse</a></h3>
+            <h3><a href="kompetencer.html.html">Kompetencer</a></h3>
+        </div>
+    </footer>
+
+    <!--------------------------------------------------------------------------------
+    ##ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL##
+
+                FØLGENDE ER LAVET AF CHATGPT OG ER UDELUKKENDE EN SJOV FEATURE
+                                    - SE BORT HERFRA
+
+    ##ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL    ADVARSEL##
+   ---------------------------------------- ----------------------------------------->
+
+    <script>
+        document.querySelectorAll(".video-wrap").forEach(wrapper => {
+            const video = wrapper.querySelector("video");
+            const btn = wrapper.querySelector(".sound-btn");
+
+            btn.addEventListener("click", () => {
+                if (video.muted) {
+                    video.muted = false;
+                    btn.textContent = "🔊";
+                } else {
+                    video.muted = true;
+                    btn.textContent = "🔇";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,671 @@
+/* -----------------------------------------
+             basis info til alle sidder
+-----------------------------------------  */
+
+* {
+    margin: 0; /* fjerner standard margin fra CSS og HTML5 */
+    padding: 0; /* fjerner standard margin fra CSS og HTML5 */
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* -----------------------------------------
+             Menu start
+-----------------------------------------  */
+
+header {
+    height: 90px;
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        position: fixed;
+        letter-spacing: 0.3em;
+        top: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn-open {
+    cursor: pointer;
+    display: block;
+    color: white;
+}
+
+.menu-btn-close {
+    cursor: pointer;
+    display: block;
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        position: absolute;
+        letter-spacing: 0.3em;
+        top: 30px;
+        right: 30px;
+        text-align: right;
+        z-index: 4;
+    }
+}
+
+#menu-toggle:checked ~ .menu-wrapper { /* Slår menuen til */
+    opacity: 1;
+    visibility: visible;
+    z-index: 3;
+}
+
+#menu-toggle:not(:checked) ~ .menu-wrapper { /* Slår menuen fra */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.menu-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    color: white;
+
+    input {
+        display: none;
+    }
+
+    .menu-container {
+        position: relative;
+        height: 100%;
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7vh;
+            z-index: 3;
+
+            h1 {
+                font-weight: 200;
+                a:hover {
+                    font-weight: 600;
+                }
+            }
+
+        }
+    }
+}
+
+/* -----------------------------------------
+             Main footer
+-----------------------------------------  */
+
+
+footer.main-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 325px;
+    background-color: #0e0e0e;
+    padding: 25px 100px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+
+        h1 {
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        p {
+            font-weight: 200;
+        }
+
+        p:hover {
+            font-weight: 400;
+        }
+
+        .footer-kontakt {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .footer-info-some {
+            margin-top: 15px;
+            .footer-info-some-img {
+                height: 50px;
+                width: 50px;
+                filter: invert(10%);
+            }
+            .footer-info-some-img:hover {
+                filter: invert(60%);
+
+            }
+        }
+    }
+
+    .footer-line {
+        height: 1px;
+        width: 50%;
+        background-color: white;
+        margin-bottom: 10px;
+    }
+
+    .footer-box-menu {
+        border-left: #575757 1px solid;
+        h2 {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        h3 {
+            font-weight: 200;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+/* -----------------------------------------
+             Main start class
+-----------------------------------------  */
+
+
+section.main-start {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    h1 {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 14rem;
+
+        @media screen and (max-width: 500px) {
+            font-size: 10rem;
+        }
+    }
+
+    h2 {
+        margin-top: -25px;
+        font-weight: 100;
+        font-size: 2rem;
+        @media screen and (max-width: 500px) {
+            font-size: 3rem;
+        }
+    }
+}
+
+section.main-start-img {
+    height: 900px;
+    z-index: 0;
+
+    img {
+        margin-top: -90px;
+        width: 100%;
+        height: 950px;
+        object-fit: cover;
+        filter: blur(1px);
+        z-index: 0;
+    }
+
+    h1 {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 40%;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 10rem;
+        font-weight: 500;
+        text-shadow: 3px 3px 0 black;
+    }
+}
+
+/* -----------------------------------------
+             Billede spacer til index.html
+-----------------------------------------  */
+
+section.main-spacer-img {
+    padding: 50px;
+
+    .spacer-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        video {
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .video-wrap {
+            position: relative;
+            display: inline-block;
+        }
+
+        .spacer-img-1x2 {
+            height: 750px;
+            max-width: 650px;
+            min-width: 550px;
+        }
+
+        .spacer-img-2x2 {
+            height: 600px;
+            max-width: 350px;
+            min-width: 300px;
+        }
+    }
+}
+
+.sound-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* -----------------------------------------
+             Main intro box hvem er jeg - til index.html
+-----------------------------------------  */
+
+section.main-intro {
+    margin-top: 200px;
+    padding: 100px 175px;
+
+    .intro-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #121212;
+        border-radius: 5px;
+        padding: 50px;
+
+
+        .intro-box-1 {
+            background-image: url("img/SylleCV.jpeg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 300px;
+        }
+
+        .intro-box-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.box-design {
+    height: 500px;
+    width: 40%;
+    border-radius: 2px;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    h1 {
+        font-size: 5vh;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.2rem;
+        padding: 25px 20px;
+        font-weight: 200;
+        line-height: 1.5;
+    }
+
+}
+
+/* -----------------------------------------
+            Main CV - hvad har jeg lavet - til cv.html
+-----------------------------------------  */
+
+section.main-cv {
+    padding: 100px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    .cv-container {
+        padding-left: 100px;
+
+        h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            font-style: italic;
+            padding-right: 300px;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            font-style: italic;
+            padding-left: 200px;
+            padding-right: 100px;
+            margin-bottom: 50px;
+            text-align: right;
+        }
+
+        .cv-musik-list {
+            display: flex;
+            flex-direction: row-reverse;
+
+            ul {
+                width: 60%;
+                padding-left: 25px;
+                border-left: white 1px solid;
+            }
+            li {
+                display: flex;
+                margin-bottom: 35px;
+                margin-top: 35px;
+
+                .cv-musik-list-left {
+                    display: flex;
+                    flex-direction: column;
+                    width: 45%;
+                    margin-right: 15px;
+
+                    p {
+                        font-weight: 250;
+                        font-style: italic;
+                    }
+
+                    h2 {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .cv-musik-list-right {
+                    width: 55%;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .cv-service-list {
+            display: flex;
+            flex-direction: row;
+
+            ul {
+                width: 60%;
+                padding-left: 25px;
+                border-left: white 1px solid;
+            }
+            li {
+                display: flex;
+                margin-bottom: 35px;
+                margin-top: 35px;
+
+                .cv-service-list-left {
+                    display: flex;
+                    flex-direction: column;
+                    width: 45%;
+                    margin-right: 15px;
+
+                    p {
+                        font-weight: 250;
+                        font-style: italic;
+                    }
+
+                    h2 {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .cv-service-list-right {
+                    width: 55%;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
+
+
+/* -----------------------------------------
+            Spacer img 2 - til cv.html
+-----------------------------------------  */
+
+section.main-spacer-img-2 {
+    background-image: url("img/fraads-falles.jpg");
+    background-size: cover;
+    background-position: 50% 35%;
+    height: 500px;
+    font-family: 'Montserrat', sans-serif;
+
+    .spacer-img-2-me {
+        position: absolute;
+        margin-left: 63.3%;
+        margin-top: 1%;
+        height: 95px;
+        width: 95px;
+        border: red 5px solid;
+        border-radius: 95px;
+
+        h1 {
+            color: red;
+            margin-top: 30%;
+            margin-left: 110%;
+        }
+        p {
+            color: red;
+            margin-left: 110%;
+            font-style: italic;
+        }
+    }
+
+    .spacer-img-2-info {
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+        height: 100%;
+        width: 350px;
+
+        h2 {
+            color: white;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+/* -----------------------------------------
+            Main Uddannelse - Hvilke erfaring har jeg - til uddannelse.html
+-----------------------------------------  */
+
+section.main-udd {
+    padding: 100px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    .udd-container {
+        width: 100%;
+
+        h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            font-style: italic;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+    }
+
+    .udd-box-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .udd-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            position: sticky;
+            top: 120px;
+            height: 425px;
+            width: 80%;
+            margin-bottom: 60px;
+            background-color: #0c0c0c;
+            box-shadow: 10px 10px 0 #494949;
+
+            .udd-box-line {
+                height: 1px;
+                width: 50%;
+                background-color: white;
+                margin: 3px 0 15px 0;
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 500;
+            }
+
+            h2 {
+                font-weight: 300;
+                margin-bottom: 5px;
+            }
+            h3 {
+                font-weight: 200;
+                text-transform: lowercase;
+                font-style: italic;
+            }
+        }
+        .box-odd {
+            background-color: #131313;
+        }
+    }
+}
+
+/* -----------------------------------------
+            Main Kompetencer - mine kompetencer
+-----------------------------------------  */
+
+section.main-kompetencer {
+    padding: 100px;
+    color: #ececec;
+
+    .komp-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-family: Montserrat, sans-serif;
+
+        .komp-left {
+            width: 33%;
+
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+
+        .komp-right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 66%;
+            list-style-type: none;
+
+            .komp-box {
+                width: 25%;
+                margin: 0 30px 50px 0px;
+                padding: 20px 15px;
+                height: 250px;
+                border-radius: 5px;
+                background-color: #252525;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 2rem;
+                    text-shadow: 4px 4px 0px black;
+                    text-align: center;
+                }
+
+            }
+
+            .kb-html, .kb-grandma, .kb-css, .kb-js, .kb-office, .kb-excel {
+                background-size: cover;
+                background-position: center;
+            }
+
+            .kb-html { background-image: url("img/html.jpg");}
+            .kb-css { background-image: url("img/css.jpg"); }
+            .kb-js { background-image: url("img/javascript.jpg"); }
+            .kb-grandma { background-image: url("img/grandma3.png"); }
+            .kb-office { background-image: url("img/office_adm.png"); }
+            .kb-excel { background-image: url("img/excel.jpg");}
+        }
+    }
+}
