@@ -107,6 +107,10 @@ header {
             font-size: 7vh;
             z-index: 3;
 
+            @media screen and (max-width: 500px) {
+                font-size: 2.5vh;
+            }
+
             h1 {
                 font-weight: 200;
                 a:hover {
@@ -134,15 +138,30 @@ footer.main-footer {
     font-family: 'Montserrat', sans-serif;
     color: white;
 
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        height: auto;
+        padding: 25px 40px;
+        gap: 25px;
+    }
+
     .footer-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
+        @media screen and (max-width: 500px) {
+            width: auto;
+            text-align: center;
+        }
 
         h1 {
             font-weight: 500;
             text-transform: uppercase;
+            @media screen and (max-width: 500px) {
+                font-size: 2.5rem;
+                border-bottom: white 1px solid;
+            }
         }
         h2 {
             font-weight: 400;
@@ -161,10 +180,17 @@ footer.main-footer {
             display: flex;
             flex-direction: row;
             gap: 50px;
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+                gap: 0;
+            }
         }
 
         .footer-info-some {
             margin-top: 15px;
+            @media screen and (max-width: 500px) {
+                margin-top: 35px;
+            }
             .footer-info-some-img {
                 height: 50px;
                 width: 50px;
@@ -177,15 +203,12 @@ footer.main-footer {
         }
     }
 
-    .footer-line {
-        height: 1px;
-        width: 50%;
-        background-color: white;
-        margin-bottom: 10px;
-    }
-
     .footer-box-menu {
         border-left: #575757 1px solid;
+        @media screen and (max-width: 500px) {
+            border-left: none;
+            margin-bottom: 10px;
+        }
         h2 {
             font-weight: 400;
             text-transform: uppercase;
@@ -411,7 +434,7 @@ section.main-intro {
         line-height: 1.5;
 
         @media screen and (max-width: 500px) {
-            padding: 0px;
+            padding: 0;
         }
 
     }
@@ -680,7 +703,7 @@ section.main-kompetencer {
 
             .komp-box {
                 width: 25%;
-                margin: 0 30px 50px 0px;
+                margin: 0 30px 50px 0;
                 padding: 20px 15px;
                 height: 250px;
                 border-radius: 5px;
@@ -693,7 +716,7 @@ section.main-kompetencer {
                 h1 {
                     font-weight: 700;
                     font-size: 2rem;
-                    text-shadow: 4px 4px 0px black;
+                    text-shadow: 4px 4px 0 black;
                     text-align: center;
                 }
 
